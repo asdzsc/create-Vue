@@ -3,6 +3,12 @@
     <div class="banner">
       <img src="http://106.3.22.81/static/img/mainimg1.17f9e66.jpg" alt="" />
     </div>
+
+    <ul>
+      <router-link tag="li" to="/home/home1">home1</router-link>
+      <router-link tag="li" to="/home/home2">home2</router-link>
+    </ul>
+    <router-view></router-view>
     <div class="intro">
       <div class="intro-text">
         <img src="http://106.3.22.81/static/img/page1img1.e293d09.jpg" alt="" />

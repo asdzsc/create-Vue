@@ -36,6 +36,12 @@ export default {
       },
       deep: true,
     },
+    // $route: () => {
+    //   window.scrollTo({
+    //     top: 0,
+    //     behavior: "smooth",
+    //   });
+    // },
   },
 };
 </script>

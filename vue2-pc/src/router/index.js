@@ -20,7 +20,16 @@ const routes = [
             title: "首页",
         },
         component: () =>
-            import ('@/views/Home.vue')
+            import ('@/views/Home.vue'),
+        children: [{
+            path: 'home1',
+            component: () =>
+                import ('@/views/Home/Home1.vue'),
+        }, {
+            path: 'home2',
+            component: () =>
+                import ('@/views/Home/Home2.vue'),
+        }]
     },
     {
         path: '/about',
@@ -58,6 +67,7 @@ const routes = [
         component: () =>
             import ('@/views/FormElement.vue')
     },
+    // 捕获所有未匹配路由
     {
         path: "*",
         name: "404",

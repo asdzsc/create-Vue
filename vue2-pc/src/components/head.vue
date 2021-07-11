@@ -1,7 +1,12 @@
 <template>
   <div class="header">
     <ul>
-      <!-- 编程式 -->
+      <!-- 编程式导航 -->
+
+      <!-- $router.replace('/')  
+          $router.replace 替换当前路由路由栈会被清空 回退页面时会找不到之前的路由页面
+          $router.push 则保存路由到路由栈 前进后退的时候 页面都有保存      
+      -->
       <!-- <li @click="$router.push('/')">首页</li>
       <li @click="$router.push('/about')">关于集团</li>
       <li @click="$router.push('/news')">新闻动态</li>
