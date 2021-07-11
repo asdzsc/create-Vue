@@ -67,6 +67,19 @@ const routes = [
         component: () =>
             import ('@/views/FormElement.vue')
     },
+    {
+        path: '/others',
+        name: 'Others',
+        meta: {
+            title: "其他"
+        },
+        components: {
+            default: () =>
+                import ('@/views/Others/other1.vue'),
+            other2: () =>
+                import ('@/views/Others/other2.vue'),
+        }
+    },
     // 捕获所有未匹配路由
     {
         path: "*",

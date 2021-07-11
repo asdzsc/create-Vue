@@ -33,6 +33,9 @@
       <router-link active-class="active" tag="li" to="/element"
         >element of vue</router-link
       >
+      <router-link active-class="active" tag="li" to="/others"
+        >命名视图</router-link
+      >
     </ul>
   </div>
 </template>
