@@ -36,6 +36,7 @@
       <router-link active-class="active" tag="li" to="/others"
         >命名视图</router-link
       >
+      <router-link active-class="active" tag="li" to="/vuex">vuex</router-link>
     </ul>
   </div>
 </template>

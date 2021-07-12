@@ -68,6 +68,16 @@ const routes = [
             import ('@/views/FormElement.vue')
     },
     {
+        path: '/vuex',
+        name: 'Vuex',
+        meta: {
+            title: "Vuex"
+        },
+        component: () =>
+            import ('@/views/Vuex/Vuex.vue')
+    },
+
+    {
         path: '/others',
         name: 'Others',
         meta: {
