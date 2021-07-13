@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
-import m1 from './modules/m1'
-import m2 from './modules/m2'
 
 // 使用常量替代 Mutation 事件类型
 import {
@@ -49,10 +47,6 @@ export default new Vuex.Store({
             //     state.count -= num
             // }, 1000);
             state.count -= num
-        },
-        join(state) {
-            console.log('global')
-            state.count++
         }
     },
     // step 2 Action 提交的是 mutation，而不是直接变更状态  Action 可以包含任意异步操作 
@@ -70,8 +64,5 @@ export default new Vuex.Store({
                 // }, 1000);
         }
     },
-    modules: {
-        m1,
-        m2
-    }
+    modules: {}
 })

@@ -13,9 +13,7 @@
       <br />
       myCount:{{ myCount(100) }}
     </div>
-    <h2>moduleA：{{ header }}</h2>
-    <h2>moduleB：{{ title }}</h2>
-    <button @click="handleChange">change</button>
+
     <Child />
   </div>
 </template>
@@ -42,8 +40,6 @@ export default {
   //   computed: mapState(["count"]),
   computed: {
     ...mapState(["count"]),
-    ...mapState("m1", ["header"]),
-    ...mapState("m2", ["title"]),
     // myCount() {
     //   return this.$store.state.count * 100;
     // },
@@ -78,16 +74,6 @@ export default {
       // this.$store.dispatch("doubleCount");
       // this.$store.dispatch(DECREMENT, num)
     },
-    // 模块事件
-    handleChange() {
-      // 模块事件必须分别触发
-      this.$store.commit("join");
-      this.$store.commit("m1/join", "aa");
-      this.$store.commit("m2/join", "aa");
-    },
-    // ...mapMutations(["join"]),
-    // ...mapMutations("m1", ["join"]),
-    // ...mapMutations("m2", ["join"]),
   },
   // methods: {
   //   ...mapMutations(["add", "minus"]),
@@ -96,8 +82,6 @@ export default {
 </script>
 <style  scoped>
 button {
-  /* width: 20px; */
-  padding: 5px;
-  box-sizing: border-box;
+  width: 20px;
 }
 </style>
