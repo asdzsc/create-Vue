@@ -37,6 +37,7 @@
         >命名视图</router-link
       >
       <router-link active-class="active" tag="li" to="/vuex">vuex</router-link>
+      <router-link active-class="active" tag="li" to="/cart">cart</router-link>
     </ul>
   </div>
 </template>

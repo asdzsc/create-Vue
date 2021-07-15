@@ -76,6 +76,15 @@ const routes = [
         component: () =>
             import ('@/views/Vuex/Vuex.vue')
     },
+    {
+        path: '/cart',
+        name: 'Cart',
+        meta: {
+            title: "Cart"
+        },
+        component: () =>
+            import ('@/views/Cart/Index.vue')
+    },
 
     {
         path: '/others',

@@ -4,6 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 import m1 from './modules/m1'
 import m2 from './modules/m2'
+import cart from './modules/cart'
+import product from './modules/product'
 
 // 使用常量替代 Mutation 事件类型
 import {
@@ -72,6 +74,8 @@ export default new Vuex.Store({
     },
     modules: {
         m1,
-        m2
+        m2,
+        cart,
+        product
     }
 })
