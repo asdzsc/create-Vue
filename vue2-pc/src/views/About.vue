@@ -33,19 +33,24 @@
 </template>
 
 <script>
-import { bannerList } from "@/api/index";
+import { getList } from "@/api/index";
 export default {
   data() {
-    return {};
+    return {
+      params: {
+        current: 1, //当前页
+        pagesize: 10, //每页大小
+        status: "", //是否启用
+        name: "", //名称（模糊搜索）
+      },
+    };
   },
   mounted() {
-    this._bannerList();
+    this._getList();
   },
   methods: {
-    _bannerList() {
-      bannerList({
-        bannerType: "3",
-      }).then((res) => {
+    _getList() {
+      getList(this.params).then((res) => {
         console.log(res);
       });
     },

@@ -20,7 +20,8 @@ function notifyMsg(msg) {
 }
 
 const request = axios.create({
-    baseURL: 'https://www.027smf.com', //基础路径
+    // baseURL: 'https://www.027smf.com', //基础路径
+baseURL: process.env.VUE_APP_BASE_URL, //基础路径
     // baseURL: "http://134.175.209.7",
     withCredentials: true,
     timeout: 60000,
