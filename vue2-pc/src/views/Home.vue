@@ -43,6 +43,24 @@ export default {
   data() {
     return {};
   },
+  beforeRouteEnter(to, from, next) {
+    // 获取不到组件实例
+    next((vm) => {
+      console.log(vm);
+      // 在next回调中可以获取到
+    });
+  },
+  beforeRouteLeave(to, from, next) {
+    // 组件离开时的事件监听
+    // 组件内部可以实现路由离开的判断 全局中无法实现
+    if (confirm("你真的要离开吗？")) {
+      next();
+    }
+  },
+  // 用来监听动态路由
+  beforeRouteUpdate() {
+    console.log("0");
+  },
 };
 </script>
 <style lang="scss" scoped>

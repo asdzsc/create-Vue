@@ -82,6 +82,10 @@ const routes = [
         meta: {
             title: "Cart"
         },
+        // 路由独享的守卫
+        beforeEnter: (to, from, next) => {
+            next()
+        },
         component: () =>
             import ('@/views/Cart/Index.vue')
     },
@@ -114,6 +118,7 @@ const router = new VueRouter({
     routes
 })
 
+// 全局前置路由守卫
 router.beforeEach(function(to, from, next) {
     if (to.meta.title) {
         // 路由切换回到顶部
@@ -128,7 +133,14 @@ router.beforeEach(function(to, from, next) {
     NProgress.start()
     next();
 });
-router.afterEach(() => {
+
+router.beforeResolve((to, from, next) => {
+    // console.log('beforeResolve');
+    next()
+})
+
+// 全局后置路由守卫
+router.afterEach((to, from) => {
     NProgress.done();
 });
 
