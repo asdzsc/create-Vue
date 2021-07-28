@@ -377,7 +377,7 @@ export default defineComponent({
       state.params.name = "";
       state.params.sortField = "chat_number";
       state.params.sortOrder = "desc";
-      state.params.date = dt;
+      // state.params.date = dt;
       state.params.isDelete = "0";
       getGroupList();
     };

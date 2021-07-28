@@ -1,31 +1,67 @@
 <template>
   <div class="header">
     <ul>
-      <!-- 
-      使用 router-link 组件来导航.  
-      通过传入 `to` 属性指定链接.  
-      <router-link> 默认会被渲染成一个 `<a>` 标签 通过tag定义标签 
-      声明式导航
-      -->
-      <router-link active-class="active" tag="li" to="/home">首页</router-link>
-
-      <router-link active-class="active" tag="li" to="/about"
-        >关于集团</router-link
+      <!-- <li
+        v-for="(item, index) in options"
+        :key="item.pageUrl"
+        :class="{ active: current === index }"
+        @click="handleMenu(item, index)"
       >
-      <router-link active-class="active" tag="li" to="/news"
-        >新闻动态</router-link
+        {{ item.name }}
+      </li> -->
+      <router-link
+        v-for="item in options"
+        :to="item.pageUrl"
+        custom
+        v-slot="{ navigate, isActive }"
       >
-      <router-link active-class="active" tag="li" to="/form"
-        >antd of vue</router-link
-      >
+        <li :class="{ active: isActive }" @click="navigate">
+          {{ item.name }}
+        </li>
+      </router-link>
     </ul>
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, reactive, toRefs } from "vue";
+import { useRouter, useRoute } from "vue-router";
 export default defineComponent({
   name: "Head",
+  setup() {
+    const router = useRouter();
+    let state = reactive({
+      current: 0,
+      options: [
+        {
+          name: "首页",
+          pageUrl: "/home",
+        },
+        {
+          name: "关于集团",
+          pageUrl: "/about",
+        },
+        {
+          name: "新闻动态",
+          pageUrl: "/news",
+        },
+        {
+          name: "antd of vue",
+          pageUrl: "/form",
+        },
+      ],
+    });
+    const handleMenu = (item, index) => {
+      state.current = index;
+      router.push({
+        path: item.pageUrl,
+      });
+    };
+    return {
+      ...toRefs(state),
+      handleMenu,
+    };
+  },
 });
 </script>
 <style lang="scss" scoped>
@@ -38,7 +74,7 @@ export default defineComponent({
     margin: 0 auto;
     display: flex;
     align-items: center;
-    a {
+    li {
       flex: 1;
       list-style: none;
       cursor: pointer;
