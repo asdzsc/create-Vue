@@ -455,7 +455,7 @@ export default defineComponent({
   }
 }
 .containers {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 20px auto;
   border: 10px solid #f0f2f5;
   .form_wrap {
@@ -464,6 +464,7 @@ export default defineComponent({
     flex-wrap: wrap;
     align-items: center;
     background: #fff;
+    justify-content: center;
     .form_item {
       flex-basis: 30%;
       margin: 0px;

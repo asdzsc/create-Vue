@@ -9,13 +9,20 @@
       >
         {{ item.name }}
       </li> -->
+      <!-- <li :class="{ active: isActive }" @click="navigate">
+          {{ item.name }}
+        </li> -->
+
+      <!-- <li :class="isActive ? 'active' : ''" @click="navigate">
+        {{ item.name }}
+      </li> -->
       <router-link
         v-for="item in options"
         :to="item.pageUrl"
         custom
         v-slot="{ navigate, isActive }"
       >
-        <li :class="{ active: isActive }" @click="navigate">
+        <li :class="[isActive && 'active']" @click="navigate">
           {{ item.name }}
         </li>
       </router-link>
@@ -48,6 +55,10 @@ export default defineComponent({
         {
           name: "antd of vue",
           pageUrl: "/form",
+        },
+        {
+          name: "echart",
+          pageUrl: "/echart",
         },
       ],
     });

@@ -38,10 +38,32 @@
   </div>
 </template>
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 export default defineComponent({
   name: "Home",
-  setup() {},
+  setup() {
+    onMounted(() => {
+      if (!window.Canva || !window.Canva.DesignButton) {
+        return;
+      }
+      console.log(window);
+      console.log(window.Canva);
+      console.log(window.Canva.DesignButton);
+
+      // const api = window.Canva.DesignButton.initialize({
+      //   apiKey: "API KEY GOES HERE",
+      // });
+      // const button = document.querySelector("button");
+
+      // button.onclick = () => {
+      //   api.createDesign({
+      //     design: {
+      //       type: "Poster",
+      //     },
+      //   });
+      // };
+    });
+  },
 });
 </script>
 

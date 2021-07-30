@@ -55,6 +55,15 @@ const routes = [
         component: () =>
             import ('@/views/Form.vue')
     },
+    {
+        path: '/echart',
+        name: 'Echart',
+        meta: {
+            title: "图表"
+        },
+        component: () =>
+            import ('@/views/Echart.vue')
+    },
     // 捕获所有未匹配路由
     {
         path: '/:pathMatch(.*)*',

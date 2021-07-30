@@ -7,6 +7,8 @@ import store from './store'
 
 const app = createApp(App)
 
+// import './poster/index'
+
 // 公共css样式
 import './common/common.css'
 
