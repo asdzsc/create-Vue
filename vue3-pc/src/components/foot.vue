@@ -15,6 +15,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .foot {
+  min-width: 100%;
   .desc {
     margin-top: 20px;
     font-size: 20px;

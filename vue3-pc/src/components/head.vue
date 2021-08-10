@@ -60,6 +60,10 @@ export default defineComponent({
           name: "echart",
           pageUrl: "/echart",
         },
+        {
+          name: "转盘抽奖",
+          pageUrl: "/luck-draw",
+        },
       ],
     });
     const handleMenu = (item, index) => {

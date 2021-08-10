@@ -64,6 +64,15 @@ const routes = [
         component: () =>
             import ('@/views/Echart.vue')
     },
+    {
+        path: '/luck-draw',
+        name: 'Luck-Draw',
+        meta: {
+            title: "转盘抽奖"
+        },
+        component: () =>
+            import ('@/views/luck-draw.vue')
+    },
     // 捕获所有未匹配路由
     {
         path: '/:pathMatch(.*)*',
