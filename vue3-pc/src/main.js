@@ -23,7 +23,6 @@ import 'ant-design-vue/dist/antd.css';
 app.use(Antd);
 
 
-
 app
     .use(store)
     .use(router)
