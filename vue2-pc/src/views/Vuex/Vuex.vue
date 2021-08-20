@@ -55,7 +55,7 @@ export default {
   },
 
   mounted() {
-    // console.log(this.$store);
+    console.log(this.$store.state.m1.header);
   },
   methods: {
     handleAdd() {
@@ -74,7 +74,7 @@ export default {
       }
     },
     // 组合action
-    async handleDouble() {
+    handleDouble() {
       // this.$store.dispatch("doubleCount");
       // this.$store.dispatch(DECREMENT, num)
     },
@@ -94,7 +94,7 @@ export default {
   // },
 };
 </script>
-<style  scoped>
+<style scoped>
 button {
   /* width: 20px; */
   padding: 5px;
