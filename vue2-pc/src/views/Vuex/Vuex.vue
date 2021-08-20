@@ -81,7 +81,8 @@ export default {
     // 模块事件
     handleChange() {
       // 模块事件必须分别触发
-      this.$store.commit("join");
+      this.$store.commit("join", 10);
+      // this.$store.dispatch("joinDispatch", 10);
       this.$store.commit("m1/join", "aa");
       this.$store.commit("m2/join", "aa");
     },

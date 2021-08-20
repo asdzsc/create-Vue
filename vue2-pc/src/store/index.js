@@ -52,8 +52,9 @@ export default new Vuex.Store({
             // }, 1000);
             state.count -= num
         },
-        join(state) {
+        join(state, num) {
             console.log('global')
+                // state.count += num
             state.count++
         }
     },
@@ -70,7 +71,12 @@ export default new Vuex.Store({
             // setTimeout(() => {
             commit(MINUS, num)
                 // }, 1000);
-        }
+        },
+        // joinDispatch({
+        //     commit
+        // }, num) {
+        //     commit('join', num)
+        // }
     },
     modules: {
         m1,
