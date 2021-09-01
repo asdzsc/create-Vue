@@ -74,7 +74,7 @@ const routes = [
             title: "Vuex"
         },
         component: () =>
-            import ('@/views/Vuex/Vuex.vue')
+            import ( /* webpackChunkName: "vuex" */ '@/views/Vuex/Vuex.vue')
     },
     {
         path: '/cart',

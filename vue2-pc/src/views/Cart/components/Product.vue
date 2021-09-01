@@ -38,7 +38,7 @@ export default {
   },
 };
 </script>
-<style  scoped>
+<style scoped>
 h2 {
   font-size: 30px;
 }

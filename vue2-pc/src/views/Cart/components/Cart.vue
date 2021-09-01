@@ -6,7 +6,7 @@
       <li v-for="item in carts">
         <p>
           Name：{{ item.name }} <br />
-          Price：{{ item.price }}
+          Price：{{ item.price }} * {{ item.quantity }}
         </p>
       </li>
     </ul>
@@ -29,7 +29,7 @@ export default {
   },
 };
 </script>
-<style  scoped>
+<style scoped>
 h2 {
   font-size: 30px;
 }

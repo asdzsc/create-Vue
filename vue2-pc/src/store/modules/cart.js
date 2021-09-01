@@ -15,32 +15,31 @@ export default {
         setCart(state, product) {
             let result = state.allCart.find(value => value.id === product.id)
                 // 此产品库存减一
-            product.inventory--
+                // product.inventory--
                 // 放入购物车
-                if (result) {
-                    result.quantity++
-                } else {
-                    let {
-                        id,
-                        name,
-                        price
-                    } = product
-                    state.allCart.push({
-                        id,
-                        name,
-                        quantity: 1,
-                        price
-                    })
-                }
+            if (result) {
+                result.quantity++
+            } else {
+                let {
+                    id,
+                    name,
+                    price
+                } = product
+                state.allCart.push({
+                    id,
+                    name,
+                    quantity: 1,
+                    price
+                })
+            }
         }
     },
     actions: {
         addCart({
             commit,
             dispatch,
-            state
         }, data) {
-            dispatch('product/decrementInventory', state.id, {
+            dispatch('product/decrementInventory', data.id, {
                 root: true
             })
             commit('setCart', data)

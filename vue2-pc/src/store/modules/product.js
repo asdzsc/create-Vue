@@ -11,7 +11,7 @@ export default {
         setProductInventory(state, id) {
             let product = state.allProduct.find(v => v.id == id)
             if (product) {
-                producty.inventory--
+                product.inventory--
             }
         }
     },
