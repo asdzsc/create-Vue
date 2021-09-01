@@ -70,7 +70,8 @@ export default {
       }
     },
     // 组合action
-    async handleDouble() {
+    // async handleDouble() {
+    handleDouble() {
       // this.$store.dispatch("doubleCount");
       // this.$store.dispatch(DECREMENT, num)
     },
@@ -80,7 +81,7 @@ export default {
   // },
 };
 </script>
-<style  scoped>
+<style scoped>
 button {
   width: 20px;
 }

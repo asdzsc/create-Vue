@@ -4,7 +4,7 @@
  // 轮播图列表
  export function bannerList(param) {
      return request({
-         url: baseUrl + "sysbanners/bannerList",
+         url: baseUrl + "sysbanner/bannerList",
          method: "post",
          data: param
      });

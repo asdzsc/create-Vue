@@ -86,6 +86,11 @@ export default {
       this.$store.commit("m1/join", "aa");
       this.$store.commit("m2/join", "aa");
     },
+    // ...mapMutations({
+    //   add() {
+    //     return this.$store.commit(ADD, 20);
+    //   },
+    // }),
     // ...mapMutations(["join"]),
     // ...mapMutations("m1", ["join"]),
     // ...mapMutations("m2", ["join"]),
