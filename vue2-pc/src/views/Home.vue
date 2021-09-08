@@ -3,7 +3,6 @@
     <div class="banner">
       <img src="http://106.3.22.81/static/img/mainimg1.17f9e66.jpg" alt="" />
     </div>
-
     <ul>
       <router-link tag="li" to="/home/home1">home1</router-link>
       <router-link tag="li" to="/home/home2">home2</router-link>
@@ -60,6 +59,9 @@ export default {
   // 用来监听动态路由
   beforeRouteUpdate() {
     console.log("0");
+  },
+  mounted() {
+    console.log();
   },
 };
 </script>
