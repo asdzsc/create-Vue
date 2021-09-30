@@ -1,9 +1,9 @@
 // 用于兼容 ie9和一些低版本的高级浏览器对es6新语法并不支持
 require("babel-polyfill");
 module.exports = {
-    publicPath: './',
-    outputDir: 'dist',
-    assetsDir: 'static',
+    // publicPath: './', //基本路径
+    outputDir: 'dist', //输出文件名称
+    assetsDir: 'static', //设置放置打包生成的静态资源 (js、css、img、fonts) 的目录。
     // devtool: 'eval-source-map',开发环境  //生产环境 nosources-source-map 定位报错的行数 不暴露源码 //source-map 定位报错的行数 暴露源码
     lintOnSave: false, //关闭eslint
     devServer: {

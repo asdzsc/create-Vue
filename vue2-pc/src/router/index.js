@@ -53,7 +53,8 @@ const routes = [
         path: '/form',
         name: 'Form',
         meta: {
-            title: "表单"
+            title: "表单",
+            isAuth: true,
         },
         component: () =>
             import ('@/views/Form.vue')
@@ -113,13 +114,25 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: 'hash',
+    //connect-history-api-fallback 插件使用nodejs解决history路由刷新丢失页面
+    mode: 'history',
     // base: process.env.BASE_URL,
     routes
 })
 
-// 全局前置路由守卫
+//全局前置路由守卫————初始化的时候被调用、每次路由切换之前被调用
 router.beforeEach(function(to, from, next) {
+    NProgress.start()
+        //做一些鉴权
+    if (to.meta.isAuth) { //判断是否需要鉴权
+        if (localStorage.getItem('school') === 'atguigu') {
+            next()
+        } else {
+            alert('学校名不对，无权限查看！')
+        }
+    } else {
+        next()
+    }
     if (to.meta.title) {
         // 路由切换回到顶部
         // chrome
@@ -128,19 +141,22 @@ router.beforeEach(function(to, from, next) {
         // document.documentElement.scrollTop = 0
         // safari
         // window.pageYOffset = 0
-        document.title = '自定义title-' + to.meta.title;
+
     }
-    NProgress.start()
-    next();
+
+    //next();
 });
 
 router.beforeResolve((to, from, next) => {
     // console.log('beforeResolve');
+
     next()
 })
 
-// 全局后置路由守卫
+
+//全局后置路由守卫————初始化的时候被调用、每次路由切换之后被调用
 router.afterEach((to, from) => {
+    document.title = '自定义title-' + to.meta.title;
     NProgress.done();
 });
 
