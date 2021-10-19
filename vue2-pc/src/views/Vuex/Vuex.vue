@@ -76,7 +76,9 @@ export default {
     // 组合action
     handleDouble() {
       // this.$store.dispatch("doubleCount");
-      // this.$store.dispatch(DECREMENT, num)
+      this.$store.dispatch(DECREMENT, 20).then((res) => {
+        console.log(res);
+      });
     },
     // 模块事件
     handleChange() {
