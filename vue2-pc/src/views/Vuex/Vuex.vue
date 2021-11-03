@@ -17,6 +17,8 @@
     <h2>moduleB：{{ title }}</h2>
     <button @click="handleChange">change</button>
     <Child />
+
+    <button @click="handleModule">模块化测试</button>
   </div>
 </template>
 
@@ -87,6 +89,11 @@ export default {
       // this.$store.dispatch("joinDispatch", 10);
       this.$store.commit("m1/join", "aa");
       this.$store.commit("m2/join", "aa");
+    },
+    //模块化测试
+    handleModule() {
+      this.$store.commit("join1", 10);
+      this.$store.commit("m1/join1", "aa");
     },
     // ...mapMutations({
     //   add() {

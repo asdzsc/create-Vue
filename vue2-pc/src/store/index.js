@@ -56,6 +56,11 @@ export default new Vuex.Store({
             console.log('global')
                 // state.count += num
             state.count++
+        },
+        join1(state, num) {
+            console.log('global')
+                // state.count += num
+            state.count++
         }
     },
     // step 2 Action 提交的是 mutation，而不是直接变更状态  Action 可以包含任意异步操作 

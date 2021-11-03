@@ -8,6 +8,10 @@ export default {
         join(state, str) {
             console.log('m1');
             state.header += str
+        },
+        join1(state, str) {
+            console.log('m1');
+            state.header += str
         }
     },
 
