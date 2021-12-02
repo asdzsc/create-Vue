@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@lucky-canvas/vue": "^0.1.0",
     "amfe-flexible": "^2.2.1",
     "axios": "^0.21.0",
     "core-js": "^3.6.5",

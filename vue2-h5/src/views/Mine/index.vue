@@ -232,8 +232,8 @@ export default {
     };
   },
   mounted() {
-    this.user = this.$store.state.mobile.user;
-    console.log(this.user);
+    // this.user = this.$store.state.mobile.user;
+    // console.log(this.user);
   },
   methods: {},
 };

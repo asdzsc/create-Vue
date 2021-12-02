@@ -21,4 +21,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.layout_container {
+  .cont {
+    padding-bottom: 55px;
+  }
+}
+</style>

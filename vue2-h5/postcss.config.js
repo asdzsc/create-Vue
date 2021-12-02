@@ -26,6 +26,7 @@ module.exports = {
 
 
             rootValue: 37.5,
+            selectorBlackList: [".van"],
             // 需要转换的css属性，*是所有的属性都可以转换
             propList: ['*'],
         },

@@ -19,8 +19,11 @@ import './utils/dayjs'
 // 设置 rem 基准值
 import 'amfe-flexible'
 Vue.use(Vant)
-import LuckDraw from 'vue-luck-draw'
-Vue.use(LuckDraw)
+    // import LuckDraw from 'vue-luck-draw'
+    // Vue.use(LuckDraw)
+
+import VueLuckyCanvas from '@lucky-canvas/vue'
+Vue.use(VueLuckyCanvas)
 Vue.config.productionTip = false
 
 //系统错误捕获
